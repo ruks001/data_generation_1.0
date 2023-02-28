@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+/datagen/
+/pretrained_weights/
+/image_data/
+/mask_data/

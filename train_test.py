@@ -44,6 +44,7 @@ if __name__=="__main__":
     image_path = 'image_data'
     mask_path = 'mask_data'
     model_path = 'pretrained_weights/unet_pretrained.pth'
+    os.makedirs('pretrained_weights', exist_ok=True)
 
     seg_data = segment_data(image_path, mask_path)
     val_size = int(0.1 * len(seg_data))
