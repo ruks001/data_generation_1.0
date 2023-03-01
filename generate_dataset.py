@@ -123,7 +123,7 @@ if __name__=="__main__":
 
     print('Image generation in progress............')
 
-    for i in range(0, 6000):
+    for i in range(0, image_numbers):
         fil_sel = np.random.randint(0, len_orig_files)
         image = cv2.imread(temp_im_path + orig_files[fil_sel])
         #     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)

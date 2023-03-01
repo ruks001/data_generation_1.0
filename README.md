@@ -29,7 +29,7 @@ The images in the "resources" folder is in RGBA format. If you want to add more 
 python generate_dataset.py
 ```
 
-### 2.Train and test data. (Training and validation loss and dsc graphs are saved in 'graphs' folder. Pretrained weight is aved in "pretrained_werights" folder.)
+### 2.Train and test data. (Training and validation loss and dsc graphs are saved in 'graphs' folder. Pretrained weight is saved in "pretrained_werights" folder.)
 ```
 python train_test.py
 ```
@@ -39,6 +39,8 @@ The model is trained and tested in the RGB format. Make sure the images in the "
 ```
 python test_file.py
 ```
+
+### If you add more data in resources folder, update images_paths and masks_paths in the "definition.py". The added images must be in RGBA format and the masks must have the value of 255 for the ROI. Change parameters if you need to.
 
 # Graphs showing progress in training.
 ![DSC_plot.png](graphs%2FDSC_plot.png) ![loss_graph.png](graphs%2Floss_graph.png)
