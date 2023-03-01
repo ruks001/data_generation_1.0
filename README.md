@@ -41,4 +41,4 @@ python test_file.py
 ```
 
 # Graphs showing progress in training.
-![DSC_plot.png](graphs%2FDSC_plot.png)
+![DSC_plot.png](graphs%2FDSC_plot.png) ![loss_graph.png](graphs%2Floss_graph.png)
