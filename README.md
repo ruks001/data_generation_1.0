@@ -24,6 +24,7 @@ pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2+cu
 # II. MAIN TASK
 
 ### 1.Generate and store images. (The images are stored in 'image_data' folder and masks are stored in 'mask_data' folder.)
+The images in the "resources" folder is in RGBA format. If you want to add more images to generate data, they must be in RGBA format.
 ```
 python generate_dataset.py
 ```
@@ -32,3 +33,12 @@ python generate_dataset.py
 ```
 python train_test.py
 ```
+
+### 3.Use model to segment in test data. (create folder "testing_images" in the same project folder and store images to be segmented inside.)
+The model is trained and tested in the RGB format. Make sure the images in the "testing_images" are in the RGB format.
+```
+python test_file.py
+```
+
+# Graphs showing progress in training.
+![DSC_plot.png](graphs%2FDSC_plot.png)
