@@ -4,3 +4,5 @@ __pycache__/
 /pretrained_weights/
 /image_data/
 /mask_data/
+/testing_images/
+/testing_results/

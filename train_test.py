@@ -33,9 +33,6 @@ class EarlyStopper:
 
 
 if __name__=="__main__":
-    batch_size = 8
-    num_epochs = 100
-
     Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.Tensor
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = UNet()
@@ -55,17 +52,8 @@ if __name__=="__main__":
     val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
     test_dataset = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
 
-    # dataset = DataLoader(segment_data(image_path, mask_path),
-    #                      batch_size=batch_size,
-    #                      shuffle=True)
     dataloaders = {'train': train_dataloader, 'val': val_dataloader}
     phase = 'train'
-    # for dat in train_dataloader:
-    #     image = dat['image']
-    #     mask = dat['mask']
-    #
-    #     print(image.shape)
-    #     print()
 
     criterion = nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)

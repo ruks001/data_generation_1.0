@@ -2,6 +2,7 @@ import cv2
 import os
 import shutil
 import numpy as np
+from definition import *
 
 
 # create source images with rotation and flips
@@ -85,8 +86,6 @@ def get_pts(image):
 
 
 if __name__=="__main__":
-    images_paths = ['resources/image0.png', 'resources/image1.png', 'resources/image2.png', ]
-    masks_paths = ['resources/masks0.png', 'resources/masks1.png', 'resources/masks2.png', ]
 
     if os.path.exists('temp_img_folder'):
         shutil.rmtree('temp_img_folder')
